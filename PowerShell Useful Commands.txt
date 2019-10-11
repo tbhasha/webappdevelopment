@@ -1,0 +1,12 @@
+To check the history file location: (Get-PSReadlineOption).HistorySavePath
+
+C:\Users\pallath\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\Windows PowerShell ISE Host_history.txt
+
+To check the Database Connection:
+(New-Object system.data.oledb.oledbenumerator).GetElements() | select SOURCES_NAME, SOURCES_DESCRIPTION
+Exception calling "Fill" with "1" argument(s): "The 'Microsoft.ACE.OLEDB.12.0' provider is not registered on the local machine."
+At U:\Loan Services\Powershell\Excel as Database.ps1:27 char:1
++ $cmdObjectAdapter.Fill($cmdObjectDataTables)
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : InvalidOperationException
